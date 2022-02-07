@@ -682,6 +682,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963120820}
   m_CullTransparentMesh: 1
+--- !u!1 &994456393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 994456395}
+  - component: {fileID: 994456394}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &994456394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994456393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116c20624d0e3bb4d82bf019ba2c90c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Bip
+    clip: {fileID: 8300000, guid: c9cad913cae57664fb934ff689f66972, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Boop
+    clip: {fileID: 8300000, guid: fd535021344af604badef38a8c3ef5db, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &994456395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994456393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1297182435
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +751,7 @@ GameObject:
   - component: {fileID: 1297182438}
   - component: {fileID: 1297182437}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: QUIT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -764,7 +820,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1297182438}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1758184994}
+        m_TargetAssemblyTypeName: MenuUi, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1297182438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,7 +1028,7 @@ GameObject:
   - component: {fileID: 1643075758}
   - component: {fileID: 1643075757}
   m_Layer: 5
-  m_Name: Button
+  m_Name: START
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1029,7 +1097,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1643075758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1758184994}
+        m_TargetAssemblyTypeName: MenuUi, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1643075758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1081,6 +1161,7 @@ GameObject:
   - component: {fileID: 1758184991}
   - component: {fileID: 1758184990}
   - component: {fileID: 1758184989}
+  - component: {fileID: 1758184994}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1196,54 +1277,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0.01, y: 1.06}
   m_SizeDelta: {x: 30.3429, y: 29.9177}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1910005253
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1910005255}
-  - component: {fileID: 1910005254}
-  m_Layer: 4
-  m_Name: PostPro
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1910005254
+--- !u!114 &1758184994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1910005253}
+  m_GameObject: {fileID: 1758184988}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Script: {fileID: 11500000, guid: cc9f9c0f3f787f24e91c690a6aa7212c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 26fe59fa3a51cf74c9c0a69042d3cf39, type: 2}
-  isGlobal: 1
-  blendDistance: 0
-  weight: 1
-  priority: 0
---- !u!4 &1910005255
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1910005253}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.5, z: 0.16666667}
-  m_Children: []
-  m_Father: {fileID: 2043346694}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2025861565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,7 +1367,6 @@ GameObject:
   - component: {fileID: 2043346693}
   - component: {fileID: 2043346692}
   - component: {fileID: 2043346691}
-  - component: {fileID: 2043346690}
   m_Layer: 0
   m_Name: BOMBE
   m_TagString: Untagged
@@ -1330,19 +1374,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2043346690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043346689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e27c0e5ec3db1ed40aff0c7d8a969cc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PostPro: {fileID: 1910005253}
 --- !u!65 &2043346691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1416,8 +1447,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 2, z: 6}
-  m_Children:
-  - {fileID: 1910005255}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

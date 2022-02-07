@@ -4,12 +4,13 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float timeRemaining = 10;
+    public static float timeRemaining = 10;
     public bool timerIsRunning = false;
     public TextMeshProUGUI timeText;
 
     private void Start()
     {
+        timeRemaining = 10;
         timerIsRunning = true;
     }
 
@@ -28,8 +29,10 @@ public class Timer : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
                 timeText.text = "BOOM";
+                Explosion.GameOver();
             }
         }
+        
     }
 
     /*void DisplayTime()

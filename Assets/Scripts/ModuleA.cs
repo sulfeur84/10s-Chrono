@@ -11,19 +11,23 @@ public class ModuleA : MonoBehaviour
     public void ButtonOne()
     {
         One = true;
+        FindObjectOfType<AudioManager>().PitchAlea("Bip");
     }
     public void ButtonTwo()
     {
+        FindObjectOfType<AudioManager>().PitchAlea("Bip");
         if(One)Two = true;
         else Lose();
     }
     public void ButtonThree()
     {
+        FindObjectOfType<AudioManager>().PitchAlea("Bip");
         if(One && Two)Three = true;
         else Lose();
     }
     public void ButtonFour()
     {
+        FindObjectOfType<AudioManager>().PitchAlea("Bip");
         if (One&&Two&&Three)
         {
             Win();
@@ -32,12 +36,15 @@ public class ModuleA : MonoBehaviour
 
     public void Win()
     {
-        Debug.Log("Ta gagné");
-        Voyant.material = Vert;
+        if (!WinCondition.One) WinCondition.One = true; 
+        else if (WinCondition.Two) WinCondition.Three = true; 
+        else if (WinCondition.One) WinCondition.Two = true;
+        Voyant.material = Vert;  
     }
 
     public void Lose()
     {
         Debug.Log("T NUL");
+        Explosion.GameOver();
     }
 }
