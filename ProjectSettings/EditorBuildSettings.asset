@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: fe421d2d3dbd23f4fa47861ff2bfeda7
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/ChooseLevel.unity
+    guid: a78ee030c9388694fbc2115dd66cf9db
+  - enabled: 1
+    path: Assets/Scenes/Facile.unity
+    guid: 62f78dcd93cb6dc4a8605582df629c0f
+  - enabled: 1
+    path: Assets/Scenes/Normal.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Difficile.unity
+    guid: 966dc82cb24371e4a93815644ff7f833
+  - enabled: 1
+    path: Assets/Scenes/BoopOnly.unity
+    guid: dba57c144446aac4dbaaa88832832d6e
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: ef38a1dc4ca47c3418050313ec787783

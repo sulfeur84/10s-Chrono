@@ -7,7 +7,7 @@ public class MenuUi : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("ChooseLevel");
     }
 
     public void GoMenu()

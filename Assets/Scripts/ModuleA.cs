@@ -37,6 +37,9 @@ public class ModuleA : MonoBehaviour
     public void Win()
     {
         if (!WinCondition.One) WinCondition.One = true; 
+        else if (WinCondition.Four) WinCondition.Five = true; 
+        else if (WinCondition.Three) WinCondition.Four = true; 
+        else if (WinCondition.Two) WinCondition.Three = true; 
         else if (WinCondition.Two) WinCondition.Three = true; 
         else if (WinCondition.One) WinCondition.Two = true;
         Voyant.material = Vert;  
