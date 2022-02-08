@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Modules:
   - {fileID: 658851825423399618, guid: 3592a2872211ba547bb25c5380a654ab, type: 3}
+  - {fileID: 3076380094234301568, guid: 27d982e9dadad784196246b855a74242, type: 3}
 --- !u!4 &307902438
 Transform:
   m_ObjectHideFlags: 0
